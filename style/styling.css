@@ -1,0 +1,611 @@
+body {
+  background-image: url("../assets/images/background.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  
+}
+.content {
+  width: 100%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  flex-direction: column;
+}
+a{
+  text-decoration: none;
+}
+input:required:focus:valid {
+  background: url("../assets/images/valid.png");
+  background-repeat: no-repeat;
+  background-position: 85% 50%;
+  background-size: 25px;
+  background-color: rgba(0, 255, 0, .2);
+  border-color: green;
+}
+input:focus:invalid {
+  border-color: red;
+  background: url("../assets/images/invalid.png");
+  background-repeat: no-repeat;
+  background-position: 85% 50%;
+  background-size: 25px;
+  background-color: rgba(255, 0, 0, .2);
+  background-size: 25px;
+}
+.contenttasks{
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+#createTaskButton.disabled {
+  pointer-events: none;
+  background-color: lightgray;
+}
+.userinfo{
+  margin-bottom: 12rem;
+}
+#sessionconfig{
+  right: 10px;
+  top: 15px;
+  position: absolute;
+}
+#webtittle {
+  color: white;
+  margin-bottom: 30px;
+}
+#taskLimitMessage{
+  color: red;
+  display: none;
+  font-size: 20px;
+}
+::-webkit-calendar-picker-indicator{
+  font-size: 20px;
+}
+
+::-ms-reveal {
+  filter: invert(100%);
+}
+.box {
+  border: 0px solid rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+  box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.527), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  background-color: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(5px);
+  padding: 50%;
+}
+.box2 {
+  border: 0px solid rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+  box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.527),
+    0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  background-color: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(5px);
+  padding: 50px;
+  margin: 20px;
+}
+.box3 {
+  border: 0px solid rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+  box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.527),
+    0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  background-color: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(5px);
+  padding: 50px;
+  margin: 20px;
+}
+.logo {
+  width: 130px;
+  height: auto;
+  margin-bottom: 30px;
+}
+
+.logoconteiner {
+  position: relative;
+  width: 130px; 
+  height: auto;
+  margin: 0 auto;
+  cursor: pointer;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  margin: 0 auto;
+  background-color: transparent;
+  color: black;
+  font-size: 20px;
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+  opacity: 0; 
+  transition: opacity 0.3s ease; 
+}
+
+.logoconteiner:hover .overlay {
+  opacity: 1; 
+}
+
+.logoconteiner img {
+  width: 100%; 
+  height: auto; 
+  transition: filter 0.3s ease; 
+}
+
+.logoconteiner:hover img {
+  filter: grayscale(100%); 
+}
+#profilepicture{
+  width: 200px;
+  height: auto;
+  margin-right: 30px;
+}
+#profpicedit {
+  max-width: 200px;
+  width: 60%;
+  height: auto;
+  padding: 0;
+  margin: 0;
+}
+.userinfo{
+  display: flex;
+  align-items: center;
+  margin: 20px;
+}
+#pen{
+  color: white;
+  font-size: 30px;
+}
+#usernametext{
+  color: white;
+  font-size: 3rem;
+}
+
+#handicon{
+  color: white;
+  margin: 10px;
+  font-size: 30px;
+}
+#forgotpasword {
+  color: lightgrey;
+  font-size: 15px;
+  text-decoration: none;
+}
+#forgotpasword:hover {
+  color: rgb(177, 177, 177);
+}
+.logininputs {
+  width: 300px;
+  background-color: transparent;
+  padding: 1em;
+  margin-bottom: 2em;
+  border: none;
+  border-left: 2px solid white;
+  border-top: 2px solid white;
+  border-radius: 20px;
+  backdrop-filter: blur(5px);
+  box-shadow: 4px 4px 60px rgba(0, 0, 0, 0.2);
+  color: #fff;
+  font-family: Montserrat, sans-serif;
+  font-weight: 500;
+  transition: all 0.5s ease-in-out;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+#taskTableBody{
+  text-align: center;
+}
+.buttons {
+  background-color: transparent;
+  color: white;
+  border: 2px solid white;
+  border-radius: 30px;
+  padding: 15px 32px;
+  margin: 10px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+#buttonsid {
+  width: 200px;
+  font-size: 15px;
+}
+.buttonsession{
+  width: 300px;
+  font-size: 20px;
+}
+#buttontask{
+  width: 200px;
+  font: 20px;
+  float: right;
+}
+#mytasks{
+  color: white;
+  font-size: 30px;
+  float: left;
+}
+#newtasktext{
+  color: white;
+  font-size: 50px;
+}
+.smallertext{
+  color: white;
+  font-size: 30px;
+}
+
+#smallertextpaddingbottom{
+  margin-bottom: 100px;
+}
+.closebutton{
+  right: 5%;
+  top: 5%;
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  transition: all ease-in-out 0.3s;
+  background: transparent;
+  border: 0;
+  color: black;
+  font-size: 2rem;
+  font-weight: bold;
+  background-color: white;
+  border-radius: 30px;
+}
+.closebutton:hover{
+  color: white;
+  background-color: black;
+  border: 2px solid white;
+  
+}
+.inputdescription {
+  width: 70%;
+  height: 25px;
+  border-radius: 7px;
+}
+.inputdate {
+  width: 50%;
+  height: 25px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+.createtask{
+  background-color: white;
+  position: absolute;
+  margin: auto;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 50%;
+  height: 80%;
+  max-width: 450px;
+  max-height: 650px;
+  z-index: 1;
+  align-content: center;
+  border-radius: 25px;
+  border: 3px solid rgba(255, 255, 255, 0.644);
+  border-radius: 10px;
+  box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.527), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(20px);
+  display: none;
+  text-align: center;
+}
+#formuseredit{
+  margin-top: 20px;
+}
+.edittask{
+  background-color: white;
+  position: absolute;
+  margin: auto;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 50%;
+  height: 80%;
+  max-width: 450px;
+  max-height: 650px;
+  z-index: 1;
+  align-content: center;
+  border-radius: 25px;
+  border: 3px solid rgba(255, 255, 255, 0.644);
+  border-radius: 10px;
+  box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.527), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(20px);
+  display: none;
+  text-align: center;
+}
+
+.btnrecuperar {
+  background-color: transparent;
+  color: white;
+  border: 2px solid white;
+  border-radius: 30px;
+  padding: 15px 32px;
+  margin: 10px;
+  font-size: 15px;
+  text-decoration: none;
+  cursor: pointer;
+  width: 300px;
+  transition: all 0.2s;
+}
+.btnrecuperar:hover {
+  color: rgb(97, 97, 97);
+  border: 2px solid rgb(97, 97, 97);
+}
+.buttons span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.buttons span:after {
+  content: "\00bb";
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+.buttons:hover span {
+  padding-right: 25px;
+}
+.buttons:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(20px);
+  color: white;
+  text-align: center;
+  padding: 4px;
+}
+.boxcheckbox {
+  display: inline-block;
+  position: relative;
+  padding-left: 35px;
+  cursor: pointer;
+  font-size: 20px;
+  color: white;
+  margin-bottom: 10px;
+}
+
+.boxcheckbox input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 20px;
+  width: 20px;
+  background-color: transparent;
+  border: 2px solid white;
+  border-radius: 5px;
+}
+
+.boxcheckbox:hover input ~ .checkmark {
+  background-color: #050505;
+}
+
+.boxcheckbox input:checked ~ .checkmark {
+  background-color: #000000;
+}
+
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.boxcheckbox input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.boxcheckbox .checkmark:after {
+  left: 6px;
+  top: 2px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+th, td {
+  border:1px solid black;
+  background-color: rgb(240, 240, 240);
+  padding: 8px;
+}
+table{
+  border-collapse: collapse;
+}
+thead th {
+  width: 80%;
+}
+#tables_tasks{
+  margin-top: 5rem;
+  width: 100%;
+  padding: 10px;
+  font-size: 20px;
+}
+#cell_highlight{
+  font-style: bold;
+  font-size: 25px;
+}
+
+@media (max-width: 800px) {
+  .createtask{
+    width: 95%;
+    height: 80%;
+  }
+  .edittask{
+    width: 95%;
+    height: 80%;
+  }
+  .logininputs{
+    width: 50%;
+    max-width: 300px;
+  }
+  #sessionconfig {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    right: 0px;
+    top: 5px;
+}  
+  #createtaskdiv {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center; 
+    text-align: center;
+  }
+
+  
+  #profilepicture {
+    display: block;
+    margin: 0 auto;
+    margin-top: 100px;
+
+  }
+  .table-container {
+    display: flex;
+    justify-content: center;
+  }
+  
+  #usernametext, #handicon, table thead tr{
+    display: none;
+  }
+ 
+
+  #mytasks {
+    font-size: 3rem; 
+    margin: 0px;
+  }
+  
+  #buttontask {
+    margin-top: 15px; 
+  }
+  table {
+    width: 100%;
+  }
+ 
+  table tr{
+    display: block;
+    margin-bottom: 20px;
+  }
+
+  table th, table td{
+    padding: .5em;
+  }
+
+  table td{
+    margin: 0;
+    display: block;
+    text-align: right;
+    font-size: 1em;
+    border: 3px solid black;
+  }
+
+  table td:before{
+    content: attr(data-label) ": ";
+    font-weight: 600;
+    font-size: 20px;
+    float: left;
+  }
+ #tables_tasks {
+  margin: 5rem auto; 
+  width: 80%; 
+  font-size: 20px;
+}
+  .contenttasks {
+    width: 100%;
+    height: 100vh; 
+    padding: 0;
+    flex-direction: column;
+    overflow-x: hidden; 
+  }
+  html,
+  body {
+      overflow-x: hidden;
+      width: 100%;
+      height: 100%;
+      margin: 0; 
+      overflow-x: hidden; 
+  }
+  .box {
+    height: 100%;
+    width: 100%;
+  }
+  .box2 {
+    height: 100%;
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+    padding-top: 50%;
+    padding-bottom: 50%;
+    flex-direction: column;
+  }
+  .box3{
+    height: 100%;
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+    flex-direction: column;
+  }
+  .userinfo{
+    margin: 20px;
+    padding: 0px;
+  }
+  #forgotpasword {
+    margin-top: 10px;
+    text-align: center;
+    display: block;
+  }
+  .content {
+    width: 100%;
+  }
+  body {
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+  }
+  #logo {
+    padding-top: 15vw;
+  }
+  .boxcheckbox {
+    margin-bottom: 10px;
+    font-size: 15px;
+  }
+ 
+}
+
+@media (max-width: 550px){
+.createtask {
+    height: 100%;
+}
+.edittask{
+  height: 100%;
+}
+}
