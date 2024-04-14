@@ -1,6 +1,6 @@
 # SwipeHire
 
-SwipeHire é um sistema de login simples desenvolvido apenas com HTML e CSS. Ele oferece funcionalidades básicas de login, registro e recuperação de password, e é destinado a ser usado como um exemplo de implementação frontend de um sistema de autenticação.
+SwipeHire é um sistema de login simples desenvolvido apenas com HTML e CSS, utilizando o framework Bootstrap. Ele oferece funcionalidades básicas de login, registro e recuperação de password, e é destinado a ser usado como um exemplo de implementação frontend de um sistema de autenticação.
 
 ## Páginas
 
@@ -16,9 +16,6 @@ SwipeHire é um sistema de login simples desenvolvido apenas com HTML e CSS. Ele
 ### Página de Recuperação de password
 - `recoverpassword.html`: Aqui os utilizadores podem solicitar uma nova password. Eles precisam fornecer o seu email e clicar num botão para receberem as instruções de recuperação no email.
 
-## Estilo CSS
-- `styling.css`: Este arquivo contém estilos CSS para todas as páginas do site. Ele define a aparência e o layout dos elementos HTML.
-
 ## Como Executar
 - Basta abrir qualquer um dos arquivos HTML em um browser para visualizar o site. Não é necessário nenhum servidor backend.
 
@@ -30,4 +27,3 @@ Este projeto foi desenvolvido por Vasco Gavino em 2024.
 
 ## Direitos Autorais
 © 2024 Vasco Gavino. Todos os direitos reservados.
-
